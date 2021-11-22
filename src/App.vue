@@ -26,6 +26,9 @@
   font-style: normal;
 }
 
+$hover-color: rgba(0, 0, 0, 0.04);
+$active-color: rgba(0, 0, 0, 0.08);
+
 #app {
   font-family: Calibre, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,6 +46,18 @@ ul {
 button {
   font-family: SF-Pro;
   padding: 5px 16px;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+[role="button"]:hover {
+  background-color: $hover-color;
+}
+
+[role="button"]:active {
+  background-color: $active-color;
 }
 
 </style>
