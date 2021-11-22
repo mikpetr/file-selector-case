@@ -33,6 +33,21 @@
 </template>
 
 <script>
+// UNIT TEST: check if there is no back button when there is no parrent folder
+// UNIT TEST: check if there is back button when there is parrent folder
+// UNIT TEST: check if loading appears while loading folders strcuture
+// UNIT TEST: check that we don't show the list while loading folders strcuture
+// UNIT TEST: check that currentFolder is getting updated when "enterFolder" event
+//            is triggered on FilesExplorerFilesList component
+// UNIT TEST: check that file is added in selectedFiles object when "toggleFile" event
+//            is triggered on FilesExplorerFilesList component
+// UNIT TEST: check that file is removed from selectedFiles object when "toggleFile" event
+//            is triggered on FilesExplorerFilesList component
+// UNIT TEST: check that "Select files" button is disabled when there is no any file selected
+// UNIT TEST: check that text on submit button is "Select files" when there is no files selected
+// UNIT TEST: check that there is a right number of selected files on "Select X fiels"
+//            button when some files are selected
+
 import folderStructureApi from '@/api/folderStructureApi';
 import FilesExplorerFilesList from './FilesExplorerFilesList.vue';
 

@@ -19,3 +19,5 @@ const router = new VueRouter({
 });
 
 export default router;
+
+// UNIT TEST: check that we are entering into the Home route when app is opening

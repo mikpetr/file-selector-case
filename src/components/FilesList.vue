@@ -8,6 +8,8 @@
 </template>
 
 <script>
+// UNIT TEST: check if list is rendered correctly
+
 export default {
   name: 'FilesList',
   props: {

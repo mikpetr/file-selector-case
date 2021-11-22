@@ -16,6 +16,10 @@
 </template>
 
 <script>
+// UNIT TEST: check if file explorer opened after clicking the button
+// UNIT TEST: check if file explorer closed when "close" event triggers on FilesExplorer component
+// UNIT TEST: check if list is updated when "input" event triggers on FilesExplorer component
+
 // @ is an alias to /src
 import FilesList from '@/components/FilesList.vue';
 import FilesExplorer from '@/components/FilesExplorer.vue';

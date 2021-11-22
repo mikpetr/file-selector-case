@@ -45,6 +45,16 @@
 </template>
 
 <script>
+// UNIT TEST: check that folders list is rendered
+// UNIT TEST: check that files list is rendered
+// UNIT TEST: check that "Folder is empty." message appears when there is no any file or folder
+// UNIT TEST: check that alternative icon appears on file row when image preview is not supported
+// UNIT TEST: check that alternative icon appears on file row when image preview loading is failed
+// UNIT TEST: check that we are listing only files that are supported
+// UNIT TEST: check that "check" icon appears when file is selected
+// UNIT TEST: check that currentFolder is changed properly when we enter into the folder
+// UNIT TEST: check that we can go back to the same folder after entering into the folder
+
 const supportedFileTypes = [
   'image/jpeg',
   'image/png',
