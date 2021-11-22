@@ -1,11 +1,8 @@
 <template>
   <div class="FilesList">
-    <p class="title">Files selected</p>
+    <p class="title">{{ files.length ? 'Files selected' : 'No files selected' }}</p>
     <ul class="list">
-      <li>Room 1.png</li>
-      <li>Room 2.png</li>
-      <li>Room 3.png</li>
-      <li>Room with very very very very very very very very very long name so that it cuts at</li>
+      <li v-for="file in files" :key="file.id">{{file.name}}</li>
     </ul>
   </div>
 </template>
@@ -13,6 +10,9 @@
 <script>
 export default {
   name: 'FilesList',
+  props: {
+    files: Array,
+  },
 };
 </script>
 

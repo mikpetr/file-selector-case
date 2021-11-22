@@ -2,11 +2,16 @@
   <div class="Home">
     <div class="controls">
       <div class="wrapper">
-        <a-button type="primary">Select Files</a-button>
-        <FilesExplorer />
+        <a-button @click="openExplorer" type="primary">Select Files</a-button>
+        <FilesExplorer
+          v-if="explorerIsOpen"
+          :value="filesList"
+          @input="listFiles"
+          @close="closeExplorer"
+        />
       </div>
     </div>
-    <FilesList />
+    <FilesList :files="filesList" />
   </div>
 </template>
 
@@ -17,9 +22,26 @@ import FilesExplorer from '@/components/FilesExplorer.vue';
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      explorerIsOpen: false,
+      filesList: [],
+    };
+  },
   components: {
     FilesList,
     FilesExplorer,
+  },
+  methods: {
+    openExplorer() {
+      this.explorerIsOpen = true;
+    },
+    closeExplorer() {
+      this.explorerIsOpen = false;
+    },
+    listFiles(filesList) {
+      this.filesList = filesList;
+    },
   },
 };
 </script>
