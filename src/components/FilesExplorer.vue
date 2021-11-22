@@ -93,9 +93,10 @@ export default {
       );
 
       this.$emit('input', filesArray);
-      this.close();
+      this.$emit('close');
     },
     close() {
+      this.$emit('input', []);
       this.$emit('close');
     },
   },
